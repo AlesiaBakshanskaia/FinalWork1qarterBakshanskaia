@@ -27,3 +27,15 @@ string[] GetStartArray (int size){
     }
     return startarray;
 }
+
+int GetLengthFinishArray (string[] array){
+    int result = 0;
+    for (int i = 0; i < array.Length; i++){
+        string temporary = array[i];
+        if (temporary.Length <= 3){
+            result += 1;
+        }
+        
+    }
+    return result;
+}
