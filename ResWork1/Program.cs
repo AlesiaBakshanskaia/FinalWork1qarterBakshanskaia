@@ -39,3 +39,18 @@ int GetLengthFinishArray (string[] array){
     }
     return result;
 }
+
+
+
+string[] GetFinishArray (string[] array){
+    string[] finisharray = new string[LengthFinishArray];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++){
+        string temporary = array[i];
+        if (temporary.Length <= 3){
+            finisharray[j] = array[i];
+            j++;
+        }
+    }
+    return finisharray;
+}
