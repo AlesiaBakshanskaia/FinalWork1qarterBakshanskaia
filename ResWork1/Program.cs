@@ -1,4 +1,4 @@
-﻿//
+﻿//Написать программу, которая из массива строк сформирует массив со строками не более 3 знаков в длину
 
 string[] StartArray = GetStartArray(5);
 Console.Write("['");
@@ -16,4 +16,14 @@ string[] FinishArray = GetFinishArray(StartArray);
 Console.Write("['");
 Console.Write(String.Join("', '", FinishArray));
 Console.WriteLine("']");
+}
+
+
+string[] GetStartArray (int size){
+    string[] startarray = new string[size];
+    for (int i = 0; i < size; i++){
+        Console.WriteLine("Введите  любое слово, число, сочетание цифр,знаков или букв");
+        startarray[i] = Console.ReadLine()!;
+    }
+    return startarray;
 }
